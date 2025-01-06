@@ -10,6 +10,8 @@ public class Calculator4U {
         //계속유지 해야 하는 데이터
         int sum = 0;
 
+        int before = 0;
+
         //몇번일지 몰라
         while(true){
             System.out.println("Insert Value");
@@ -19,8 +21,15 @@ public class Calculator4U {
                 break;
             }
 
+            if(str.equals("R")){
+                sum -= before;
+                continue;
+            }
+
             int money = Integer.parseInt(str);
             sum = sum + money;
+
+            before = money;
 
             System.out.println("SUM :" + sum);
 
