@@ -1,0 +1,29 @@
+package org.example;
+
+import java.util.Scanner;
+
+public class Calculator4U {
+
+    public static void main(String[] args) {
+        //Scanner 필요
+        Scanner scanner = new Scanner(System.in);
+        //계속유지 해야 하는 데이터
+        int sum = 0;
+
+        //몇번일지 몰라
+        while(true){
+            System.out.println("Insert Value");
+            String str = scanner.nextLine();
+
+            if(str.equals("END")){
+                break;
+            }
+
+            int money = Integer.parseInt(str);
+            sum = sum + money;
+
+            System.out.println("SUM :" + sum);
+
+        }//end while
+    }
+}
