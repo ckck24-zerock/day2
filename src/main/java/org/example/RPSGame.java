@@ -1,10 +1,18 @@
 package org.example;
 
+import java.util.Scanner;
+
 public class RPSGame {
 
     public static void main(String[] args) {
-        //사용자 값 0,1,2
-        int user = (int) (Math.random() * 3);
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("가위0,바위1,보자기2 입력하세요");
+        String str = scanner.nextLine(); //키보드에서 입력한 문자열
+        System.out.println(str);
+
+        int user = Integer.parseInt(str);
         //컴 값 0,1,2
         int com = (int) (Math.random() * 3);
 
